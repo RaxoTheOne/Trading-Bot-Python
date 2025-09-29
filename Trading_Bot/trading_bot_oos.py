@@ -18,8 +18,8 @@ import csv, os
 
 # ----------------- KONFIG -----------------
 YF_TICKER = "BTC-USD"          # yfinance Ticker
-START = "2021-01-01"
-END = None                     # None = bis heute
+START = (datetime.today() - timedelta(days=700)).strftime("%Y-%m-%d")
+END = datetime.today().strftime("%Y-%m-%d")                   # None = bis heute
 TIMEFRAME = "1h"               # '1h' mapping in fetch
 SMA_SHORT = 50
 SMA_LONG = 200
